@@ -1,6 +1,6 @@
 # Developing a Simple Webserver
 Name : Santhan Kumar 
-phn no:98989898
+
 ID : 23004568
 
  Dept : AIML 
@@ -30,9 +30,37 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-Type your code here
-# OUTPUT:
 
+
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+content = """
+<html>
+<head>
+<body>
+<h1>Welcome</h1>
+</body>
+</head>
+</html>
+"""
+
+class HelloHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request recieved")
+        self.send_response(200)
+        self.send_header('Content-type','text/html;charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+print("This is my webserver")
+server_address = ('',80)
+httpd = HTTPServer(server_address,HelloHandler)
+httpd.serve_forever()
+
+
+
+# OUTPUT:
+![Alt Text](images/web%20server%20.png)
 # RESULT:
 
 The program is executed succesfully
