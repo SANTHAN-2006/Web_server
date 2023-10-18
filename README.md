@@ -40,7 +40,7 @@ content = """
 <body>
 <h1>Top Five Web Application Development Frameworks</h1>
 <p>1.Django</p>
-<p>2. MEAN</p>
+<p>2. MEAN Stack</p>
 <p>3. React</p>
 </body>
 </head>
