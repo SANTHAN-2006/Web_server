@@ -38,7 +38,7 @@ content = """
 <html>
 <head>
 <body>
-<h1>Welcome</h1>
+<h1>The top Five web application development frameworks</h1>
 </body>
 </head>
 </html>
@@ -58,7 +58,7 @@ httpd.serve_forever()
 ```
 
 # OUTPUT:
-![output](images/web%20server%20.png)
+![output](images/webserver1.png)
 # RESULT:
 
 The program is executed succesfully.
